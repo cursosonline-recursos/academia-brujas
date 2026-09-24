@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#171322" />
+  <meta name="description" content="Aprende el arte. Encuentra tu práctica. Abre tu camino." />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Academia de Brujas — Cruza el umbral</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#inicio" aria-label="Academia de Brujas, inicio">
+        <span class="brand-mark">✦</span><span><b>ACADEMIA</b><small>DE BRUJAS</small></span>
+      </a>
+      <div class="side-label">TU ESPACIO</div>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <button class="nav-item active" data-view="inicio"><span>⌂</span> Umbral</button>
+        <button class="nav-item" data-view="academia"><span>✧</span> Academia <i class="nav-dot"></i></button>
+        <button class="nav-item" data-view="grimorio"><span>▤</span> Grimorio</button>
+        <button class="nav-item" data-view="aquelarre"><span>☽</span> Aquelarre</button>
+        <button class="nav-item" data-view="camino"><span>♙</span> Mi camino</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="mini-membership"><span class="mini-star">✦</span><div><b>Aprendiz</b><small>Tu camino comienza</small></div><span class="level-number">01</span></div>
+        <button class="profile-button" data-view="camino"><span class="avatar avatar-small">L</span><span><b>Lucía R.</b><small>Buscadora</small></span><span class="more">···</span></button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuButton" aria-label="Abrir menú">☰</button>
+        <div class="breadcrumb"><span>ACADEMIA</span><span class="crumb-sep">/</span><b id="crumbCurrent">UMBRAL</b></div>
+        <div class="top-actions"><button class="icon-button" id="searchButton" title="Buscar">⌕</button><button class="icon-button notification-button" title="Notificaciones">♧<i></i></button><button class="account-button" id="authButton">Entrar</button><button class="upgrade-button" id="upgradeButton">✦ <span>Despertar mi magia</span></button></div>
+      </header>
+
+      <section class="view active" id="view-inicio">
+        <div class="welcome-row"><div><div class="eyebrow"><span class="eyebrow-line"></span> MIÉRCOLES, 23 DE SEPTIEMBRE</div><h1>Bienvenida de vuelta,<br><em>Lucía.</em></h1><p class="lead">Tu camino mágico se construye un pequeño ritual a la vez.</p></div><div class="moon-badge"><span class="moon">◐</span><span><b>Luna creciente</b><small>Un momento para nutrir<br>lo que ya comenzaste</small></span></div></div>
+        <div class="hero-card">
+          <div class="hero-copy"><div class="hero-kicker"><span>✦</span> TU PRÁCTICA DE HOY</div><h2>Escucha lo que<br>la llama <em>revela.</em></h2><p>Una pausa para observar la luz, volver a tu intención y descubrir qué te está mostrando este momento.</p><div class="hero-meta"><span>◷ 5 MIN</span><span>✧ VELAS · INICIACIÓN</span></div><button class="primary-button" id="startPractice">Comenzar práctica <span>↗</span></button></div>
+          <div class="hero-art"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="sun-disc">✦</div><div class="candle"><div class="flame"></div><div class="wick"></div><div class="wax"></div><div class="candle-base"></div></div><span class="art-caption">LUMEN · 03</span></div>
+        </div>
+        <div class="section-heading"><div><div class="eyebrow">TU SENDERO</div><h2>Continúa tu iniciación</h2></div><button class="text-button" data-view="academia">Ver academia <span>→</span></button></div>
+        <div class="continue-card"><div class="course-symbol tarot-symbol">☾</div><div class="continue-info"><div class="card-eyebrow">CAMINO DE LAS VELAS <span>·</span> MÓDULO 01</div><h3>El lenguaje de la llama</h3><p>Lección 2 de 6 <span class="progress-dots"><i class="filled"></i><i class="filled"></i><i></i><i></i><i></i><i></i></span></p></div><button class="round-arrow" id="continueCourse" aria-label="Continuar curso">↗</button><div class="continue-progress"><i style="width:32%"></i></div></div>
+        <div class="lower-grid"><div><div class="section-heading compact"><div><div class="eyebrow">UN LUGAR PARA CRECER</div><h2>Tu aquelarre te espera</h2></div><button class="text-button" data-view="aquelarre">Explorar <span>→</span></button></div><div class="circle-card"><div class="circle-art"><span>☽</span><i>✧</i><b>✦</b></div><div class="circle-info"><div class="card-eyebrow">CÍRCULO DE APRENDICES</div><h3>El Caldero Compartido</h3><p>248 aprendices compartiendo sus primeras prácticas.</p><div class="avatar-stack"><span class="avatar a1">M</span><span class="avatar a2">S</span><span class="avatar a3">A</span><span class="avatar a4">+</span><small>Únete a la conversación</small></div></div></div></div>
+          <div class="streak-card"><div class="eyebrow">TU RITMO, A TU MANERA</div><h3>Pequeños pasos.<br><em>Gran magia.</em></h3><p>Cada práctica que haces deja una huella en tu camino.</p><div class="week-row"><span><i>L</i><b>✦</b></span><span><i>M</i><b>✦</b></span><span><i>M</i><b>·</b></span><span><i>J</i><b>·</b></span><span><i>V</i><b>·</b></span><span><i>S</i><b>·</b></span><span><i>D</i><b>·</b></span></div><small class="streak-note">2 prácticas esta semana</small></div></div>
+      </section>
+
+      <section class="view" id="view-academia"><div class="page-heading"><div class="eyebrow">LA ESCUELA ABRE SUS PUERTAS</div><h1>Encuentra tu <em>camino.</em></h1><p class="lead">Aprende a tu ritmo. Practica con intención. Descubre la bruja que ya vive en ti.</p></div><div class="filter-row"><button class="filter-chip selected">Todos los caminos <span>⌄</span></button><button class="filter-chip">Iniciación</button><button class="filter-chip">Intermedio</button><button class="filter-chip">Avanzado</button><span class="course-count">8 CAMINOS</span></div><div class="path-grid" id="pathGrid"></div></section>
+
+      <section class="view" id="view-grimorio"><div class="page-heading page-heading-row"><div><div class="eyebrow">TU LIBRO DE SOMBRAS</div><h1>El <em>Grimorio.</em></h1><p class="lead">Un refugio para tus símbolos, intuiciones y descubrimientos.</p></div><button class="primary-button" id="newEntry">＋ Nueva página</button></div><div class="grimoire-banner"><span class="banner-spark">✦</span><div><b>Todo lo que escribes aquí te pertenece.</b><small>Por defecto, tus páginas son privadas. Tú decides qué compartir.</small></div><span class="lock-icon">♙</span></div><div class="grimoire-tools"><div class="search-field"><span>⌕</span><input id="entrySearch" placeholder="Buscar en tu grimorio..." /></div><div class="filter-pills"><button class="filter-pill active" data-filter="all">Todas</button><button class="filter-pill" data-filter="ritual">Rituales</button><button class="filter-pill" data-filter="sueño">Sueños</button><button class="filter-pill" data-filter="lectura">Lecturas</button></div></div><div class="entry-grid" id="entryGrid"></div></section>
+
+      <section class="view" id="view-aquelarre"><div class="page-heading page-heading-row"><div><div class="eyebrow">NINGUNA BRUJA CAMINA SOLA</div><h1>El <em>Aquelarre.</em></h1><p class="lead">Encuentra a quienes hablan tu mismo lenguaje mágico.</p></div><button class="primary-button" id="createPost">＋ Compartir algo</button></div><div class="community-layout"><div class="feed-column"><div class="feed-tabs"><button class="selected">Para ti</button><button>Mis círculos</button><button>Eventos</button></div><div id="feedList"></div></div><aside class="community-aside"><div class="aside-card moon-event"><div class="eyebrow">PRÓXIMO ENCUENTRO</div><div class="event-date"><b>29</b><span>SEP<br>2026</span></div><h3>Círculo de Luna Llena</h3><p>Una ceremonia compartida para honrar lo que ha florecido.</p><button class="outline-button" id="eventButton">Ver ceremonia <span>→</span></button></div><div class="aside-card suggested"><div class="eyebrow">CÍRCULOS PARA TI</div><div class="suggested-circle"><span class="tiny-orb">☼</span><div><b>Hijas de la Luna</b><small>1.2k integrantes</small></div><button class="join-button">+</button></div><div class="suggested-circle"><span class="tiny-orb purple">☽</span><div><b>Tarot sin miedo</b><small>846 integrantes</small></div><button class="join-button">+</button></div><button class="text-button">Ver todos los círculos →</button></div></aside></div></section>
+
+      <section class="view" id="view-camino"><div class="page-heading"><div class="eyebrow">TU TRANSFORMACIÓN</div><h1>Mi <em>camino.</em></h1><p class="lead">No tienes que saberlo todo. Solo dar el siguiente paso.</p></div><div class="profile-hero"><div class="profile-avatar">L<span>✦</span></div><div class="profile-identity"><div class="eyebrow">BUSCADORA · DESDE SEPTIEMBRE 2026</div><h2>Lucía R.</h2><p>“Estoy aprendiendo a confiar en mi intuición.”</p></div><button class="outline-button" id="editProfile">Editar perfil</button></div><div class="journey-stats"><div><span>RANGO ACTUAL</span><b>01 <small>· Buscadora</small></b></div><div><span>CAMINO INICIADO</span><b>1 <small>de 8</small></b></div><div><span>PÁGINAS EN TU GRIMORIO</span><b id="entryCount">3</b></div></div><div class="section-heading"><div><div class="eyebrow">EL MAPA DE TU TRANSFORMACIÓN</div><h2>Tu senda de aprendiz</h2></div></div><div class="rank-track"><div class="rank-step done"><i>✦</i><b>Buscadora</b><small>Has cruzado el umbral</small></div><div class="track-line done"></div><div class="rank-step current"><i>Ⅱ</i><b>Aprendiz</b><small>Tu siguiente despertar</small></div><div class="track-line"></div><div class="rank-step"><i>Ⅲ</i><b>Practicante</b><small>Domina tu primera senda</small></div><div class="track-line"></div><div class="rank-step"><i>✧</i><b>Oficiante</b><small>Comparte tu magia</small></div></div><div class="creator-callout"><div class="creator-sigil">✧</div><div><div class="eyebrow">ALGÚN DÍA, TU SABIDURÍA PUEDE SER EL COMIENZO DE OTRA</div><h3>¿Te gustaría compartir lo que sabes?</h3><p>Al completar tu primera senda podrás crear tu perfil de practicante y ofrecer lecturas, círculos y talleres.</p></div><button class="text-button" id="creatorInfo">Descubrir cómo →</button></div></section>
+
+      <footer class="footer"><span>✦ ACADEMIA DE BRUJAS</span><span>Un lugar para aprender, practicar y florecer.</span><a href="#privacidad">Privacidad · Ayuda</a></footer>
+    </main>
+    <nav class="mobile-nav" aria-label="Navegación móvil"><button class="active" data-view="inicio"><span>⌂</span>Umbral</button><button data-view="academia"><span>✧</span>Academia</button><button data-view="grimorio"><span>▤</span>Grimorio</button><button data-view="aquelarre"><span>☽</span>Aquelarre</button><button data-view="camino"><span>♙</span>Camino</button></nav>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="modalClose" aria-label="Cerrar">×</button><div class="modal-sigil">✦</div><div class="eyebrow" id="modalEyebrow">TU GRIMORIO</div><h2 id="modalTitle">Abre una nueva página</h2><div id="modalContent"></div></div></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="config.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
