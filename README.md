@@ -29,6 +29,7 @@ La PWA es estática, pero los secretos de Hotmart y la clave `service_role` de S
 
 1. Crea un proyecto Supabase.
 2. Ejecuta `supabase/migrations/202609230001_membership.sql`.
+2a. Para habilitar cuentas beta y el panel de contenido, ejecuta también `supabase/migrations/202609230002_admin_beta_content.sql`.
 3. Completa `config.js` con `supabaseUrl`, `supabaseAnonKey` y `hotmartCheckoutUrl`. La anon/publishable key sí puede estar en el navegador; nunca pegues la service role.
 4. Configura plantillas de correo y URL de retorno permitida para el dominio de la PWA en Supabase Auth.
 5. Despliega la función `hotmart-webhook` y configura los secretos en el backend:
@@ -53,6 +54,28 @@ Supabase ya proporciona `SUPABASE_URL` y `SUPABASE_SERVICE_ROLE_KEY` en el entor
 - Reembolso/contracargo: acceso retirado.
 
 La política de acceso tras cancelar debe coincidir con lo que informas antes de la compra y con la configuración de Hotmart.
+
+## Cuenta administradora y cuenta beta
+
+1. Publica la app y configura Supabase Auth como se describe arriba.
+2. Inicia sesión una vez con el correo que quieres usar para administrar; esto crea la cuenta en Supabase Auth.
+3. En **SQL Editor**, ejecuta una de estas consultas y reemplaza el correo por el correo exacto de esa cuenta:
+
+```sql
+-- Para que tu cuenta pueda gestionar caminos, módulos y lecciones:
+insert into public.academy_roles (user_id, role)
+select id, 'admin' from auth.users where lower(email) = lower('tu-correo@ejemplo.com')
+on conflict do nothing;
+
+-- Para una cuenta beta con acceso completo, usa esta en una consulta separada:
+insert into public.academy_roles (user_id, role)
+select id, 'beta' from auth.users where lower(email) = lower('correo-beta@ejemplo.com')
+on conflict do nothing;
+```
+
+4. Cierra sesión y vuelve a entrar. La administradora verá **Administrar** en el menú; la cuenta beta tendrá acceso completo a la academia pero no podrá editar el contenido.
+
+Asigna `admin` solo a quien deba publicar contenido. El rol `beta` da acceso premium, pero no permisos editoriales.
 
 ## Seguridad
 
